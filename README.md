@@ -99,11 +99,11 @@ void loop()
 
 
 **
-**Simulation output:** 
+**Output:** 
 **
 
 
-[My image](username.github.com/repository/img/image.jpg)
+![output](https://github.com/Praneet002/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/blob/main/Screenshot%202022-05-19%20180947.png)
 
 
 
