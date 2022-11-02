@@ -69,24 +69,28 @@ CIRCUIT DIAGRAM
 
 ### PROGRAM
  ~~~
- int potPin= A5;
-int ledPin=2;
 void setup()
 {
-  pinMode(potPin, INPUT);
-  pinMode(potPin, OUTPUT);
+  pinMode(A0,INPUT);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
   Serial.begin(9600);
 }
 
 void loop()
 {
-  int PotMeasure = analogRead(A5);
- if (PotMeasure>=450)
- {
-   digitalWrite(2, HIGH);
- }
-  else
-    digitalWrite(2, LOW);
+  int Sensorvalue=analogRead(A0);
+  Serial.println(Sensorvalue);
+  if(Sensorvalue<=30)
+  {
+    digitalWrite(8,HIGH);
+    digitalWrite(7,LOW);
+  }
+  else if(Sensorvalue>=500)
+  {
+    digitalWrite(8,LOW);
+    digitalWrite(7,HIGH);
+  }
 }
  ~~~
 
@@ -102,9 +106,15 @@ void loop()
 
 ### Output: 
 
+### Output before simulation:
 
+![output](01.png)
 
-![output](https://github.com/Praneet002/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/blob/main/Screenshot%202022-05-19%20180947.png)
+### Output after simulation:
+
+![output](02.png)
+
+![output](03.png)
 
 
 
